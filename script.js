@@ -1,3 +1,32 @@
+/* ─── Visit Counter ─────────────────────────────────────────────────────── */
+/*
+ * Uses CountAPI (countapi.xyz) — free, no signup.
+ * One-time setup after deploying to GitHub Pages:
+ *   1. Open your browser console on the live site and run:
+ *        fetch('https://api.countapi.xyz/set/saisab-portfolio/visits?value=234')
+ *      This seeds the counter at 234.
+ *   2. After that, every page load auto-increments via the hit endpoint below.
+ *
+ * NAMESPACE below ('saisab-portfolio') must match what you used in step 1.
+ */
+(function () {
+  const BASE = 0; // offset already baked into CountAPI via the one-time seed above
+  const NAMESPACE = 'saisab-portfolio';
+  const KEY = 'visits';
+  const countEl = document.getElementById('visitCount');
+
+  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+    .then(r => r.json())
+    .then(data => {
+      if (countEl && data.value) {
+        countEl.textContent = (data.value + BASE).toLocaleString();
+      }
+    })
+    .catch(() => {
+      if (countEl) countEl.textContent = '234+';
+    });
+})();
+
 /* ─── Theme Toggle ──────────────────────────────────────────────────────── */
 
 const html = document.documentElement;
