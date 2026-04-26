@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saisab Sadhu — Research Portfolio</title>
+  <meta name="description" content="Research portfolio of Saisab Sadhu — NLP, LLM Interpretability, RAG, and Multi-Agent AI Systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
+  <link rel="apple-touch-icon" href="assets/profile.jpg" />
+</head>
+<body>
+
+  <!-- ─── Navigation ─── -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-brand">
+        <img class="nav-avatar" src="assets/profile.jpg" alt="Saisab Sadhu" />
+        Saisab Sadhu
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-social" id="navSocial">
+        <a href="https://www.linkedin.com/in/saisab-sadhu" target="_blank" rel="noopener" class="nav-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/saisab21" target="_blank" rel="noopener" class="nav-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=saisab" target="_blank" rel="noopener" class="nav-social-link" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        </a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon sun">&#9728;</span>
+        <span class="theme-icon moon">&#9790;</span>
+      </button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">&#9776;</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Saisab Sadhu</h1>
+        <p class="hero-title">AI Researcher &mdash; NLP &bull; LLM Interpretability &bull; RAG &bull; Multi-Agent Systems</p>
+        <p class="hero-bio">
+          MS &amp; B.Tech graduate from <strong>IISER Bhopal</strong> (April 2026), currently at <strong>Lexsi Labs</strong> as a Research Intern in Mechanistic Interpretability. I build systems that understand <em>why</em> language models believe what they believe.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:sadhusaisab@gmail.com" class="btn btn-primary">Get in Touch</a>
+          <a href="Saisab_Sadhu_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener">CV / Résumé</a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/saisab-sadhu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/saisab21" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="https://scholar.google.com/citations?user=saisab" target="_blank" rel="noopener" class="social-link" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            Scholar
+          </a>
+        </div>
+
+      </div>
+      <div class="hero-badge-col">
+        <div class="hero-photo-frame">
+          <img src="assets/profile.jpg" alt="Saisab Sadhu" />
+        </div>
+        <div class="hero-news">
+          <p class="news-label">Recent</p>
+          <ul class="news-list">
+            <li>
+              <span class="news-date">Apr 2026</span>
+              <span>Joined <strong>Lexsi Labs</strong> as Research Intern — Mechanistic Interpretability</span>
+            </li>
+            <li>
+              <span class="news-date">Mar 2026</span>
+              <span>Paper accepted at <strong>SIGIR 2026</strong> — <em>When RAG Disagrees</em></span>
+            </li>
+            <li>
+              <span class="news-date">Jan 2026</span>
+              <span>Paper accepted at <strong>ECIR 2026</strong> — <em>DARE Framework</em></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About / Research Interests ─── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">About</h2>
+          <p>
+            I am an MS &amp; B.Tech graduate from <strong>IISER Bhopal</strong> (April 2026), specializing in Data Science and Engineering. My research sits at the intersection of <strong>natural language processing</strong>, <strong>large language model interpretability</strong>, and <strong>multi-agent reasoning systems</strong>.
+          </p>
+          <p>
+            At <strong>Lexsi Labs</strong>, I investigate whether machine unlearning produces genuine circuit disruption or merely suppresses behavioral expression &mdash; using mechanistic attribution tools on Gemma Scope SAE features. This work connects deeply to my thesis on how RAG systems handle epistemic conflict between parametric and retrieved knowledge.
+          </p>
+          <p>
+            I am drawn to research that asks <em>mechanistic</em> questions: not just what models do, but why they do it, and how we can design architectures and training procedures that produce more reliable, trustworthy reasoning.
+          </p>
+        </div>
+        <div class="interests-box">
+          <h3>Research Interests</h3>
+          <ul class="interests-list">
+            <li>
+              <span class="interest-tag">Mechanistic Interpretability</span>
+              Circuit-level attribution, SAE feature analysis, unlearning audits
+            </li>
+            <li>
+              <span class="interest-tag">RAG &amp; Knowledge Conflicts</span>
+              Epistemic conflict detection, dialectical reasoning, credibility inference
+            </li>
+            <li>
+              <span class="interest-tag">Multi-Agent Systems</span>
+              Adversarial oversight, hierarchical agent frameworks, debate-driven synthesis
+            </li>
+            <li>
+              <span class="interest-tag">Biomedical NLP</span>
+              Evidence synthesis, PICO extraction, clinical text understanding
+            </li>
+            <li>
+              <span class="interest-tag">Reliable AI</span>
+              Sycophancy detection, alignment probing, trustworthy LLM behavior
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Research Projects ─── -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <p class="section-sub">Ongoing and completed research projects.</p>
+
+      <div class="research-grid">
+
+        <div class="research-card featured">
+          <div class="card-meta">
+            <span class="venue-badge venue-ongoing">Ongoing &mdash; MS Thesis</span>
+            <span class="card-year">Jan 2025 – Present</span>
+          </div>
+          <h3>Dialectical RAG: Resolving Knowledge Conflicts via Cross-Examination</h3>
+          <p class="card-org">Bio Medical Data Science Lab, IISER Bhopal &bull; PI: Dr. Tanmay Basu</p>
+          <p>
+            Investigating mechanisms to overcome imperfect context retrieval and resolve knowledge conflicts &mdash; both parametric and external &mdash; in Retrieval-Augmented Generation frameworks. The core contribution is a <strong>DARE dialectical engine</strong> that operationalizes formal cross-examination to dynamically assess source credibility based on logical resilience rather than static weighting. The engine subjects candidate sources to structured adversarial challenges and infers reliability from how well each source withstands scrutiny.
+          </p>
+          <ul class="result-list">
+            <li>77% improvement on FaithEval benchmark</li>
+            <li>28% improvement on RAMDocs</li>
+            <li>Published at SIGIR 2026 and ECIR 2026</li>
+          </ul>
+        </div>
+
+        <div class="research-card featured">
+          <div class="card-meta">
+            <span class="venue-badge venue-ongoing">Ongoing</span>
+            <span class="card-year">March 2026 – Present</span>
+          </div>
+          <h3>Machine Unlearning vs. Behavioral Suppression in LLMs</h3>
+          <p class="card-org">Lexsi Labs &bull; Mechanistic Interpretability</p>
+          <p>
+            Investigating whether standard machine unlearning methods produce genuine circuit disruption or merely suppress behavioral expression of internal knowledge states. Using <strong>EAP-IG attribution shifts</strong> over Gemma Scope SAE features pre- and post-unlearning on the TOFU forget10 benchmark, this work operationalizes the hypothesis that unlearning &mdash; like instruction-tuning &mdash; acts as a suppression mechanism rather than true knowledge erasure.
+          </p>
+          <ul class="result-list">
+            <li>Validated via relearning attack recovery speed</li>
+            <li>Mechanistic attribution over Gemma Scope SAE features</li>
+            <li>Connects circuit analysis with unlearning evaluation</li>
+          </ul>
+        </div>
+
+        <div class="research-card">
+          <div class="card-meta">
+            <span class="venue-badge venue-ongoing">Ongoing</span>
+            <span class="card-year">Jan 2025 – Present</span>
+          </div>
+          <h3>Automated PICO Extraction from Clinical Literature</h3>
+          <p class="card-org">Bio Medical Data Science Lab &bull; ICMR Bhopal Collaboration</p>
+          <p>
+            Developing an end-to-end deep learning framework for automated <strong>PICO</strong> (Population, Intervention, Comparison, Outcome) extraction from full-text clinical papers. In collaboration with ICMR Bhopal, curating annotated datasets of full research articles to accelerate evidence synthesis for systematic reviews.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-meta">
+            <span class="venue-badge venue-completed">Completed &mdash; BS Thesis</span>
+            <span class="card-year">2024 – 2025</span>
+          </div>
+          <h3>Hybrid Extractive–Abstractive Summarization via Siamese Ranking</h3>
+          <p class="card-org">Bio Medical Data Science Lab, IISER Bhopal</p>
+          <p>
+            Engineered a two-stage summarization pipeline combining a <strong>ModernBERT-based Siamese extractive stage</strong> (using scaled adaptive margin triplet loss for candidate ranking) with an abstractive generation stage. Evaluated on CNN/DailyMail.
+          </p>
+          <ul class="result-list">
+            <li>53.13 ROUGE-1 on CNN/DailyMail</li>
+            <li>Scaled adaptive margin triplet loss for ranking</li>
+          </ul>
+        </div>
+
+        <div class="research-card">
+          <div class="card-meta">
+            <span class="venue-badge venue-completed">Completed</span>
+            <span class="card-year">May – July 2024</span>
+          </div>
+          <h3>Gender Equity in IIT Admissions &mdash; Quantitative Policy Analysis</h3>
+          <p class="card-org">School of Public Policy, IIT Delhi &bull; Guide: Dr. Nandana Sengupta</p>
+          <p>
+            Analyzed 2000+ faculty profiles from IRINS to identify a <strong>12% gender differential</strong> in negative marking impact under JEE. Evaluated the socio-economic viability and impact of the 20% supernumerary quota for women at IITs using statistical modeling and causal inference methods.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <div class="card-meta">
+            <span class="venue-badge venue-completed">Completed</span>
+            <span class="card-year">2024</span>
+          </div>
+          <h3>AI Fintech Platform — Backtested Trading Framework</h3>
+          <p class="card-org">Student Innovation Grant &bull; IICE / DST, Government of India</p>
+          <p>
+            Developed an AI-driven fintech platform awarded the <strong>Student Innovation Grant (Rs. 2 Lakhs)</strong> by IICE, funded by DST, Government of India. The platform demonstrated a 68% profit increase in backtesting using ML-driven signal generation and portfolio optimization.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Publications ─── -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <p class="section-sub">Peer-reviewed publications and workshop papers. Click any paper to expand its abstract.</p>
+
+      <div class="pub-list">
+
+        <!-- SIGIR 2026 -->
+        <div class="pub-card" tabindex="0">
+          <div class="pub-header">
+            <div class="pub-meta-row">
+              <span class="pub-badge pub-conference">SIGIR 2026</span>
+              <span class="pub-status">Accepted</span>
+            </div>
+            <h3 class="pub-title">When RAG Disagrees: Detecting Latent Epistemic Conflict via Logit Interactions</h3>
+            <p class="pub-authors">Saisab Sadhu, et al.</p>
+            <p class="pub-venue">49th International ACM SIGIR Conference on Research and Development in Information Retrieval</p>
+            <div class="pub-actions">
+              <div class="pub-links">
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">arXiv ↗</a><!-- TODO: arXiv URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">DOI ↗</a><!-- TODO: DOI URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">ACL ↗</a><!-- TODO: ACL Anthology URL -->
+              </div>
+              <div class="pub-toggles">
+                <button class="abstract-toggle" aria-expanded="false">Abstract <span class="toggle-icon">&#9660;</span></button>
+                <button class="bibtex-toggle" aria-expanded="false">BibTeX <span class="toggle-icon">&#9660;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>Large language models (LLMs) exhibit a curious failure mode in retrieval-augmented generation: they may internally "disagree" with retrieved context even while outwardly appearing to follow it. We identify a <strong>mechanistic law</strong> (p &lt; 10<sup>-42</sup>) predicting internal epistemic conflict in 70B-scale models by examining logit-level interactions between parametric knowledge and retrieved context. Our analysis uncovers the <strong>Alignment Paradox</strong>: instruction-tuning decouples a model's internal epistemic tension from its surface-level textual behavior, causing standard behavioral metrics to systematically miss genuine conflict. We further develop a 25ms "Mechanistic Auditor" that identifies latent sycophancy with 76% F1, achieving a 600× speedup over state-of-the-art probing methods and significantly outperforming model self-reporting.</p>
+          </div>
+          <div class="pub-bibtex" hidden>
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-bibtex-btn">Copy</button>
+            </div>
+            <pre class="bibtex-code">@inproceedings{sadhu2026ragdisagrees,
+  title     = {When {RAG} Disagrees: Detecting Latent Epistemic Conflict
+               via Logit Interactions},
+  author    = {Sadhu, Saisab and others},
+  booktitle = {Proceedings of the 49th International {ACM} {SIGIR} Conference
+               on Research and Development in Information Retrieval},
+  year      = {2026},
+  publisher = {ACM}
+}</pre>
+          </div>
+        </div>
+
+        <!-- ECIR 2026 -->
+        <div class="pub-card" tabindex="0">
+          <div class="pub-header">
+            <div class="pub-meta-row">
+              <span class="pub-badge pub-conference">ECIR 2026</span>
+              <span class="pub-status">Accepted</span>
+            </div>
+            <h3 class="pub-title">DARE: A Dialectical Framework for Adversarial and Evidence-Aware RAG</h3>
+            <p class="pub-authors">Saisab Sadhu, et al.</p>
+            <p class="pub-venue">48th European Conference on Information Retrieval</p>
+            <div class="pub-actions">
+              <div class="pub-links">
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">arXiv ↗</a><!-- TODO: arXiv URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">DOI ↗</a><!-- TODO: DOI URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">Springer ↗</a><!-- TODO: Springer URL -->
+              </div>
+              <div class="pub-toggles">
+                <button class="abstract-toggle" aria-expanded="false">Abstract <span class="toggle-icon">&#9660;</span></button>
+                <button class="bibtex-toggle" aria-expanded="false">BibTeX <span class="toggle-icon">&#9660;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>We present DARE (Dialectical Adversarial and Evidence-Aware RAG), a framework that resolves factual conflicts in retrieval-augmented generation through a structured cross-examination process. Rather than weighting sources by static relevance scores, DARE subjects candidate passages to adversarial challenges and infers source reliability from <strong>logical resilience</strong> &mdash; how well each source withstands targeted counterfactual pressure. This dynamic credibility assessment mechanism achieves state-of-the-art gains of <strong>77% on FaithEval</strong> and <strong>28% on RAMDocs</strong>. The framework is model-agnostic and operates entirely at inference time, requiring no additional fine-tuning.</p>
+          </div>
+          <div class="pub-bibtex" hidden>
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-bibtex-btn">Copy</button>
+            </div>
+            <pre class="bibtex-code">@inproceedings{sadhu2026dare,
+  title     = {{DARE}: A Dialectical Framework for Adversarial
+               and Evidence-Aware {RAG}},
+  author    = {Sadhu, Saisab and others},
+  booktitle = {Proceedings of the 48th European Conference on
+               Information Retrieval ({ECIR})},
+  year      = {2026},
+  publisher = {Springer}
+}</pre>
+          </div>
+        </div>
+
+        <!-- EMNLP 2025 -->
+        <div class="pub-card" tabindex="0">
+          <div class="pub-header">
+            <div class="pub-meta-row">
+              <span class="pub-badge pub-workshop">EMNLP 2025 Workshop</span>
+              <span class="pub-status">Published &bull; <strong>#1 Global</strong></span>
+            </div>
+            <h3 class="pub-title">Structured Adversarial Synthesis: A Multi-Agent Framework for Generating Persuasive Financial Analysis from Earning Call Transcripts</h3>
+            <p class="pub-authors">Saisab Sadhu, et al.</p>
+            <p class="pub-venue">Proceedings of The 10th Workshop on FinNLP, EMNLP 2025</p>
+            <div class="pub-actions">
+              <div class="pub-links">
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">arXiv ↗</a><!-- TODO: arXiv URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">ACL ↗</a><!-- TODO: ACL Anthology URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">PDF ↗</a><!-- TODO: PDF URL -->
+              </div>
+              <div class="pub-toggles">
+                <button class="abstract-toggle" aria-expanded="false">Abstract <span class="toggle-icon">&#9660;</span></button>
+                <button class="bibtex-toggle" aria-expanded="false">BibTeX <span class="toggle-icon">&#9660;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>Generating high-quality financial analysis from earnings call transcripts requires synthesizing heterogeneous signals &mdash; management tone, analyst pushback, forward guidance, and market context &mdash; into coherent, persuasive reports. We design a <strong>hierarchical multi-agent framework</strong> modelling investment committee debates: specialist agents independently analyse distinct aspects of the call, a moderator orchestrates structured argumentation, and a synthesis agent produces the final report. Our system achieved a <strong>68.75% win rate</strong> over cooperative baselines, ranking <strong>first globally</strong> on the official "Win Rate vs. Analyst Report" metric &mdash; preferred over professional human analysts.</p>
+          </div>
+          <div class="pub-bibtex" hidden>
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-bibtex-btn">Copy</button>
+            </div>
+            <pre class="bibtex-code">@inproceedings{sadhu2025adversarial,
+  title     = {Structured Adversarial Synthesis: A Multi-Agent Framework
+               for Generating Persuasive Financial Analysis from
+               Earning Call Transcripts},
+  author    = {Sadhu, Saisab and others},
+  booktitle = {Proceedings of the 10th Workshop on Financial Technology
+               and Natural Language Processing ({FinNLP}), {EMNLP} 2025},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics}
+}</pre>
+          </div>
+        </div>
+
+        <!-- IJCAI-AACL 2025 -->
+        <div class="pub-card" tabindex="0">
+          <div class="pub-header">
+            <div class="pub-meta-row">
+              <span class="pub-badge pub-workshop">IJCAI-AACL 2025 Workshop</span>
+              <span class="pub-status">Published</span>
+            </div>
+            <h3 class="pub-title">Structure-Aware Chunking for Abstractive Summarization of Long Legal Documents</h3>
+            <p class="pub-authors">Saisab Sadhu, et al.</p>
+            <p class="pub-venue">JustNLP Workshop at IJCAI-AACL 2025</p>
+            <div class="pub-actions">
+              <div class="pub-links">
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">arXiv ↗</a><!-- TODO: arXiv URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">PDF ↗</a><!-- TODO: PDF URL -->
+              </div>
+              <div class="pub-toggles">
+                <button class="abstract-toggle" aria-expanded="false">Abstract <span class="toggle-icon">&#9660;</span></button>
+                <button class="bibtex-toggle" aria-expanded="false">BibTeX <span class="toggle-icon">&#9660;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>Abstractive summarization of ultra-long legal documents presents unique challenges: legal text is structured by rhetorical roles (facts, arguments, holdings, orders), and naive chunking destroys cross-section coherence. We propose a <strong>rhetorically-informed chunking pipeline</strong> that segments documents along argumentative boundaries before abstractive generation. Through systematic analysis we identify and characterize the <strong>"Coherence Gap"</strong> &mdash; a fundamental trade-off between local phrase-level accuracy and global narrative coherence in legal summarization &mdash; and propose mitigation strategies through structure-aware segmentation.</p>
+          </div>
+          <div class="pub-bibtex" hidden>
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-bibtex-btn">Copy</button>
+            </div>
+            <pre class="bibtex-code">@inproceedings{sadhu2025legal,
+  title     = {Structure-Aware Chunking for Abstractive Summarization
+               of Long Legal Documents},
+  author    = {Sadhu, Saisab and others},
+  booktitle = {Proceedings of the {JustNLP} Workshop at {IJCAI-AACL} 2025},
+  year      = {2025}
+}</pre>
+          </div>
+        </div>
+
+        <!-- AAAI EGSAI 2026 -->
+        <div class="pub-card" tabindex="0">
+          <div class="pub-header">
+            <div class="pub-meta-row">
+              <span class="pub-badge pub-workshop">AAAI EGSAI 2026</span>
+              <span class="pub-status">Accepted &bull; 1 of 51 globally</span>
+            </div>
+            <h3 class="pub-title">Hierarchical Pedagogical Oversight: A Multi-Agent Adversarial Framework for Reliable AI Tutoring</h3>
+            <p class="pub-authors">Saisab Sadhu, et al.</p>
+            <p class="pub-venue">AAAI 2026 EGSAI Community Activity</p>
+            <div class="pub-actions">
+              <div class="pub-links">
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">arXiv ↗</a><!-- TODO: arXiv URL -->
+                <a href="#" class="pub-link-btn" target="_blank" rel="noopener">PDF ↗</a><!-- TODO: PDF URL -->
+              </div>
+              <div class="pub-toggles">
+                <button class="abstract-toggle" aria-expanded="false">Abstract <span class="toggle-icon">&#9660;</span></button>
+                <button class="bibtex-toggle" aria-expanded="false">BibTeX <span class="toggle-icon">&#9660;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>AI tutoring systems are prone to confident errors, sycophantic validation, and pedagogically unsound explanations. We introduce <strong>Hierarchical Pedagogical Oversight (HPO)</strong>, a multi-agent adversarial framework for reliable AI tutoring. HPO employs a hierarchy of specialised agents &mdash; a tutor, a challenger, and an overseer &mdash; where the challenger actively probes for errors and the overseer arbitrates. An <strong>8B-parameter model</strong> structured via HPO outperforms GPT-4o by <strong>3.3% Macro F1</strong> on MRBench, demonstrating that adversarial architectural design can overcome raw model scale for pedagogical reliability.</p>
+          </div>
+          <div class="pub-bibtex" hidden>
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-bibtex-btn">Copy</button>
+            </div>
+            <pre class="bibtex-code">@inproceedings{sadhu2026hpo,
+  title     = {Hierarchical Pedagogical Oversight: A Multi-Agent Adversarial
+               Framework for Reliable {AI} Tutoring},
+  author    = {Sadhu, Saisab and others},
+  booktitle = {{AAAI} 2026 {EGSAI} Community Activity},
+  year      = {2026}
+}</pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience ─── -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">
+              <span class="tl-type industry">Industry</span>
+              <span class="tl-date">March 2026 – Present</span>
+            </div>
+            <h3>Research Intern &mdash; Mechanistic Interpretability</h3>
+            <p class="tl-org">Lexsi Labs &bull; Mumbai, India</p>
+            <ul>
+              <li>Investigating whether standard machine unlearning methods produce genuine circuit disruption or behavioral suppression, using EAP-IG attribution shifts over Gemma Scope SAE features pre- and post-unlearning on TOFU forget10.</li>
+              <li>Operationalizing the hypothesis that unlearning, like instruction-tuning, suppresses behavioral expression of internal knowledge states without disrupting underlying circuits; validated via relearning attack recovery speed.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">
+              <span class="tl-type research">Research</span>
+              <span class="tl-date">Jan 2025 – Present</span>
+            </div>
+            <h3>Graduate &amp; Undergraduate Researcher</h3>
+            <p class="tl-org">Bio Medical Data Science Lab, IISER Bhopal &bull; PI: Dr. Tanmay Basu</p>
+            <ul>
+              <li><strong>MS Thesis:</strong> Dialectical engine for RAG knowledge conflict resolution &mdash; 77% on FaithEval, 28% on RAMDocs (SIGIR 2026, ECIR 2026).</li>
+              <li><strong>BS Thesis:</strong> Hybrid extractive–abstractive summarization pipeline with ModernBERT Siamese extractive stage; 53.13 ROUGE-1 on CNN/DailyMail.</li>
+              <li><strong>Biomedical NLP:</strong> End-to-end PICO extraction framework from full-text clinical papers in collaboration with ICMR Bhopal.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">
+              <span class="tl-type industry">Industry</span>
+              <span class="tl-date">Jan 2026 – March 2026</span>
+            </div>
+            <h3>Senior Analyst Intern &mdash; DnA Team</h3>
+            <p class="tl-org">MIQ Digital &bull; Bengaluru, India</p>
+            <ul>
+              <li>Analyzed large-scale user datasets on Databricks over AWS S3; applied statistical methods and ML models for campaign optimization and attribution modeling.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">
+              <span class="tl-type research">Research</span>
+              <span class="tl-date">May – July 2024</span>
+            </div>
+            <h3>Research Intern</h3>
+            <p class="tl-org">School of Public Policy, IIT Delhi &bull; Guide: Dr. Nandana Sengupta</p>
+            <ul>
+              <li>Analyzed 2000+ faculty profiles (IRINS) to identify a 12% gender differential in negative marking impact under JEE.</li>
+              <li>Evaluated the socio-economic viability and impact of the 20% supernumerary quota for women at IITs.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <h2 class="section-title" style="margin-top: 3rem;">Education</h2>
+      <div class="edu-card">
+        <div class="edu-logo">
+          <img src="assets/iiserb-logo.png" alt="IISER Bhopal" />
+        </div>
+        <div class="edu-details">
+          <h3>MS &amp; B.Tech (Integrated) in Data Science and Engineering</h3>
+          <p class="edu-org">Indian Institute of Science Education and Research Bhopal</p>
+          <p class="edu-meta">December 2021 – April 2026 &bull; CPI: 7.31 / 10</p>
+          <p class="edu-note">Integrated five-year program combining undergraduate engineering and master's-level research in data science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Skills ─── -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>C</span><span>R</span><span>SQL</span><span>Bash</span><span>MATLAB</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>ML / DL Frameworks</h3>
+          <div class="skill-tags">
+            <span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>Hugging Face Transformers</span><span>PEFT</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>NLP &amp; LLMs</h3>
+          <div class="skill-tags">
+            <span>NLTK</span><span>Gensim</span><span>spaCy</span><span>stanza</span><span>LangChain</span><span>LangGraph</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>GenAI &amp; Research</h3>
+          <div class="skill-tags">
+            <span>AutoGen</span><span>DPO</span><span>LoRA / QLoRA</span><span>RLHF</span><span>G-Eval</span><span>RAG Architectures</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; Automation</h3>
+          <div class="skill-tags">
+            <span>PySpark</span><span>pandas</span><span>NumPy</span><span>BeautifulSoup</span><span>Selenium</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Dev &amp; MLOps</h3>
+          <div class="skill-tags">
+            <span>Git</span><span>Docker</span><span>Kubernetes</span><span>SLURM</span><span>Databricks</span><span>Weights &amp; Biases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Achievements & Talks ─── -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Achievements &amp; Conferences</h2>
+      <div class="ach-grid">
+        <div class="ach-card highlight">
+          <div class="ach-icon">&#127942;</div>
+          <h3>Top Performer — FinNLP @ EMNLP 2025</h3>
+          <p>Ranked <strong>#1 globally</strong> on the official "Win Rate vs. Analyst Report" metric. System-generated financial reports were preferred over those of professional human analysts.</p>
+        </div>
+        <div class="ach-card highlight">
+          <div class="ach-icon">&#127881;</div>
+          <h3>AAAI 2026 EGSAI Selection</h3>
+          <p>Selected to present at AAAI 2026 EGSAI Community Activity — one of <strong>51 works chosen from global submissions</strong>.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-icon">&#127873;</div>
+          <h3>Student Innovation Grant — Rs. 2 Lakhs</h3>
+          <p>Awarded by IICE (Funded by DST, Government of India) to develop an AI fintech platform; demonstrated 68% profit increase in backtesting.</p>
+        </div>
+        <div class="ach-card">
+          <div class="ach-icon">&#9992;</div>
+          <h3>CARE Conference Travel Grant</h3>
+          <p>Awarded full registration waiver and travel support for poster presentation at the Collaborative for Academic Research Excellence Conference, IIT Guwahati.</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Workshops &amp; Schools</h3>
+      <div class="conf-list">
+        <div class="conf-item">
+          <span class="conf-year">2025</span>
+          <div>
+            <strong>FinNLP Workshop @ EMNLP 2025</strong> — Virtually presented "Structured Adversarial Synthesis" and participated in shared task discussions.
+          </div>
+        </div>
+        <div class="conf-item">
+          <span class="conf-year">2025</span>
+          <div>
+            <strong>CARE Conference on Data Science &amp; AI</strong> — Presented poster on Multi-Agent Adversarial RAG, IIT Guwahati.
+          </div>
+        </div>
+        <div class="conf-item">
+          <span class="conf-year">2024</span>
+          <div>
+            <strong>Climate Change AI Summer School</strong> — Engaged with leading researchers on ML for climate science; hands-on workshops. Pittsburgh, US (Online).
+          </div>
+        </div>
+        <div class="conf-item">
+          <span class="conf-year">2024</span>
+          <div>
+            <strong>7th Summer School on AI (CV &amp; ML)</strong> — Selected for intensive program by CVIT, IIIT Hyderabad.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─── -->
+  <section id="contact" class="section">
+    <div class="container contact-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">
+        I'm always happy to discuss research ideas, collaborations, or ongoing work. Feel free to reach out.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:sadhusaisab@gmail.com" class="contact-card">
+          <span class="contact-icon">&#9993;</span>
+          <span>sadhusaisab@gmail.com</span>
+        </a>
+        <a href="mailto:saisab21@iiserb.ac.in" class="contact-card">
+          <span class="contact-icon">&#127979;</span>
+          <span>saisab21@iiserb.ac.in</span>
+        </a>
+        <a href="https://www.linkedin.com/in/saisab-sadhu" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">in</span>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/saisab21" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;vertical-align:middle;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Saisab Sadhu. Built with plain HTML, CSS, and JS.</p>
+      <p class="footer-note">Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
