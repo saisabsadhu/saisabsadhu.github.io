@@ -1376,6 +1376,16 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
+.visit-counter {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+#visitCount {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 /* ─── Responsive Misc ────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
