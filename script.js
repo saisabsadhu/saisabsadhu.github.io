@@ -125,14 +125,38 @@ document.querySelectorAll('.pub-card').forEach(card => {
 
 const navSocial = document.getElementById('navSocial');
 const heroSection = document.getElementById('hero');
+const siteHeader = document.querySelector('.site-header');
 
 const heroVisibilityObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     navSocial.classList.toggle('visible', !entry.isIntersecting);
+    siteHeader.classList.toggle('scrolled', !entry.isIntersecting);
   });
 }, { threshold: 0.1 });
 
 heroVisibilityObserver.observe(heroSection);
+
+/* ─── Scroll Progress Bar ────────────────────────────────────────────────── */
+
+const scrollProgress = document.getElementById('scrollProgress');
+let progressTicking = false;
+
+function updateScrollProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgress.style.width = `${pct}%`;
+  progressTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!progressTicking) {
+    requestAnimationFrame(updateScrollProgress);
+    progressTicking = true;
+  }
+}, { passive: true });
+
+updateScrollProgress();
 
 /* ─── Active Nav Link on Scroll ─────────────────────────────────────────── */
 
@@ -175,6 +199,22 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 fadeTargets.forEach(el => fadeObserver.observe(el));
+
+/* ─── Section Title Underline Reveal ────────────────────────────────────── */
+
+const titleTargets = document.querySelectorAll('.section-title');
+titleTargets.forEach(el => el.classList.add('underline-animate'));
+
+const titleObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      titleObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+titleTargets.forEach(el => titleObserver.observe(el));
 
 /* ─── Nav Active Style ───────────────────────────────────────────────────── */
 
